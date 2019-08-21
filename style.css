@@ -1,0 +1,60 @@
+/*
+Theme Name: ContentBerg Child Theme
+Theme URI: https://contentberg.theme-sphere.com
+Description: Child theme for ContentBerg
+Author: ThemeSphere
+Author URI: http://theme-sphere.com/
+Template: contentberg
+Version: 1.0
+Text Domain: contentberg
+*/
+
+/* Calculator */
+.calculator { font-family: sans-serif; }
+.calculator p { font-size: 15px; line-height: 1.5; margin-top: 0px; margin-bottom: 20px; }
+.calculator h2 { font-size: 24px; font-weight: 700; margin-top: 20px; }
+.calculator sub { display: block; font-size: 13px; margin-bottom: 0; color: #aaa; }
+.calculator label { display: block; font-size: 15px; font-weight: 700; margin-bottom: 5px; }
+.calculator [type="text"],
+.calculator [type="number"] { background: none; margin-bottom: 0; border-radius: 3px; border: 1px solid #e6e6e6; padding: 0 12px; height: 40px; font-size: 16px; width: 100%; }
+.calculator [type="text"]:focus,
+.calculator [type="number"]:focus { outline: none; border-color: blue; }
+.calculator .grid { display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 40px; }
+.calculator .row { position: relative; margin-bottom: 20px; }
+.calculator .input-form span { font-size: 18px; }
+.calculator .condition label { background: white; display: inline-block; margin-bottom: 0; margin-right: 20px; border-radius: 7px; cursor: pointer; }
+.calculator .payment-details { background: #f9f9f9; padding: 20px 50px; }
+.calculator .payment-details p { font-size: 15px; margin-bottom: 10px; }
+.calculator .payment-details p:nth-child(2),
+.calculator .payment-details span { font-size: 32px; line-height: 1; margin: 0; color: blue; }
+.calculator .validate { font-size: 13px; color: red; margin: 0; }
+.calculator .months-validate,
+.calculator .tradein-validate { color: black; }
+
+/* Calculator Select styling */
+.calculator .select { position: relative; height: 40px; width: 260px; background: white; }
+.calculator .select:after { content: ''; position: absolute; top: 0; width: 0; height: 0; right: 10px; bottom: 0; margin: auto; border-style: solid; border-width: 5px 5px 0 5px; border-color: #333 transparent transparent transparent; pointer-events: none; }
+.calculator .select:before { width: 30px; position: absolute; top: 1px; right: 1px; bottom: 1px; background: whitesmoke; content: ''; pointer-events: none; }
+.calculator .select:hover:before { background: #e6e6e6; }
+.calculator .select select { font-size: 16px; border: none; box-shadow: none; border-radius: 4px; background: transparent; height: 100%; width: 100%; cursor: pointer; outline: none; padding-right: 35px; padding-left: 15px; border: 1px solid #e6e6e6; -moz-appearance: none; -webkit-appearance: none; }
+.calculator .select select:-moz-focusring { color: transparent; text-shadow: 0 0 0 #000; }
+.calculator .select select::-ms-expand { display: none; }
+.calculator .select select:focus { border-color: blue; }
+
+/* Calculator Radio styling */
+.calculator [type="radio"]:checked,
+.calculator [type="radio"]:not(:checked) { position: absolute; left: -9999px; }
+.calculator [type="radio"]:checked + label,
+.calculator [type="radio"]:not(:checked) + label { position: relative; padding-left: 28px; cursor: pointer; line-height: 20px; display: inline-block; }
+.calculator [type="radio"]:checked + label:before,
+.calculator [type="radio"]:not(:checked) + label:before { content: ''; position: absolute; left: 0; top: 0; width: 18px; height: 18px; border: 1px solid #ddd; border-radius: 100%; background: #fff; }
+.calculator [type="radio"]:checked + label:after,
+.calculator [type="radio"]:not(:checked) + label:after { content: ''; width: 12px; height: 12px; background: blue; position: absolute; top: 4px; left: 4px; border-radius: 100%; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; }
+.calculator [type="radio"]:not(:checked) + label:after { opacity: 0; -webkit-transform: scale(0); transform: scale(0); }
+.calculator [type="radio"]:checked + label:after { opacity: 1; -webkit-transform: scale(1); transform: scale(1); }
+
+/* Calculator Media Query */
+
+@media only screen and (max-width: 640px) {
+    .calculator .grid { display: grid; grid-template-columns: 1fr; grid-column-gap: 0; }
+}
